@@ -16,10 +16,11 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
+        $icons = fake()->randomElement(['blog','book' ,'desktop']);
         return [
             'name' => fake()->word(),
             'photo' => fake()->imageUrl(100, 100, 'laptop', true),
-            'icon' => 'angry',
+            'icon' => $icons,
         ];
     }
 }
